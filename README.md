@@ -29,7 +29,7 @@
 <img width="1568" height="178" alt="image" src="https://github.com/user-attachments/assets/4c40c8de-2b6e-4711-a3fe-c26a60826edc" />
 
 
-Polityka sieciowa została dobrana w taki sposób żeby zapewnić wymagane zadaniem zachowanie:
+### Polityka sieciowa została dobrana w taki sposób żeby zapewnić wymagane zadaniem zachowanie:
 
 <b><code>frontend-netpol.yml</code></b>
 
