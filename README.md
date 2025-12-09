@@ -31,11 +31,12 @@
 
 ### Polityka sieciowa została dobrana w taki sposób żeby zapewnić wymagane zadaniem zachowanie:
 
-<b><code>frontend-netpol.yml</code></b>
+### <b><code>frontend-netpol.yml</code></b>
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1d281b0a-236d-4109-9a0e-a9d9bb02a6b0" />
 
-<b><code>backend-netpol.yml</code></b>
+### <b><code>backend-netpol.yml</code></b>
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0074431a-f06c-4fd6-9ec3-916e3b708a22" />
 
 
