@@ -1,4 +1,4 @@
-# zadanie_1
+<h1>zadanie_1</h1>
 
 ## 1) Zacznijmy od zdefiniowania <code>Resource Quota</code> w każdym <code>namespace</code>:
 
@@ -16,5 +16,9 @@
 <b>Node Labels:</b>
 
 <img width="1447" height="443" alt="image" src="https://github.com/user-attachments/assets/92aa53c0-9977-4cfe-911d-34edc6b29d73" />
+
+<b>Wszystkie pody są na swoich miejscah:</b>
+<img width="1575" height="259" alt="image" src="https://github.com/user-attachments/assets/7d2c66ea-c627-4dbe-bb65-3e190795fa57" />
+
 
 
