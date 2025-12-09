@@ -29,6 +29,16 @@
 <img width="1568" height="178" alt="image" src="https://github.com/user-attachments/assets/4c40c8de-2b6e-4711-a3fe-c26a60826edc" />
 
 
+Polityka sieciowa została dobrana w taki sposób żeby zapewnić wymagane zadaniem zachowanie:
+
+<b><code>frontend-netpol.yml</code></b>
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1d281b0a-236d-4109-9a0e-a9d9bb02a6b0" />
+
+<b><code>backend-netpol.yml</code></b>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0074431a-f06c-4fd6-9ec3-916e3b708a22" />
+
+
 Test <code>NetPolicy</code> z Podów <code>frontend</code>:
 
 <img width="1568" height="652" alt="image" src="https://github.com/user-attachments/assets/046a05b3-f66c-4d78-abf2-98bfdde06a57" />
