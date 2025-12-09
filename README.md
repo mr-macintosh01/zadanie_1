@@ -13,5 +13,8 @@
 
 ## 2) Następnie wypełnijmy Klaster wszystkimi niezbędnymi zasobami (<code>Deployment</code>, <code>Service</code>, <code>NetPolicy</code>). I zróbmy to tak, aby wszystkie elementy Klastra zostały wdrożone na odpowiednich węzłach (w tym celu wykorzystałem <code>nodeSelector</code>):
 
-<b>Labels:</b>
+<b>Node Labels:</b>
+
+<img width="1447" height="443" alt="image" src="https://github.com/user-attachments/assets/92aa53c0-9977-4cfe-911d-34edc6b29d73" />
+
 
