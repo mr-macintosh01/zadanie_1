@@ -57,3 +57,18 @@
 #### <code>HPA</code>
 
 <img width="1554" height="84" alt="image" src="https://github.com/user-attachments/assets/711bc5c7-ee39-4704-bb4a-d93a5238f329" />
+
+
+
+## Test Poprawności Konfiguracji Deployment-u <code>frontend</code>
+
+Żeby udowodnić, że konfiguracja Deployment-u <code>frontend</code> dziła poprawnie (może się automatycznie przeskalować), przeprowadziłem prosty test. Polegający na utworzeniu nowego <code>Poda</code> w nowym oknie terminalu, w namespacie <code>default</code> o takiej zawartości: <code>k run -it load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while true; do wget -q -O- http://frontend.frontend.svc.cluster.local; done"</code>, generalnym celem którego jest ciągłe wysłanie zapytań do servis-u <code>frontend</code> i żeby dziłał poprawnie zwracam się bezpośrednio do FQDN (Full Quallified Domain Name) servis-u <code>frontend</code>, aby ten pod nie pomylił się z nazwami lokalnymi namespas-u <code>frontend</code>. Rezultatem dziłania jest automatyczne podniesienie ilości podów Deployment-u <code>frontend</code> poprzez <code>HPA</code>:
+
+ Tworzymy obciążenie:
+ 
+ <img width="1561" height="651" alt="image" src="https://github.com/user-attachments/assets/dbc61541-5821-4c28-9aec-3a8964baf27d" />
+
+
+Widzimy zmiane stanu wykorzystywanych zasobów:
+
+<img width="1562" height="257" alt="image" src="https://github.com/user-attachments/assets/edb3fcc6-bb45-4e22-8c35-231c724775a9" />
