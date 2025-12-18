@@ -72,3 +72,27 @@
 Widzimy zmiane stanu wykorzystywanych zasobów:
 
 <img width="1562" height="257" alt="image" src="https://github.com/user-attachments/assets/edb3fcc6-bb45-4e22-8c35-231c724775a9" />
+
+## Zadanie Nieobowiązkowe
+
+1) <b>Czy możliwe jest dokonanie aktualizacji aplikacji frontend (np. wersji obrazu
+kontenera) gdy aplikacja jest pod kontrolą opracowanego autoskalera HPA ? Proszę do
+odpowiedzi (TAK lub NIE) dodać link do fragmentu dokumentacji, w którym jest
+rozstrzygnięta ta kweska.</b>
+
+<b>Odpowiedź:</b> Tak, to jest możliwe. 
+<b>Link do dokumentacji:</b> <a>https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#autoscaling-during-rolling-update</a>
+
+Można to udowodnić w bardzo prosty sbosób. Zmienimy wersje obrazu <code>nginx</code> na <code>nginx:1.17</code> i zobaczmy co się będzie dziłać.
+
+Z powodu tego że już to robiłem to mogę się powrocić do pewnej wersji rewizji, tak i zrobiłem:
+
+<img width="1920" height="145" alt="image" src="https://github.com/user-attachments/assets/ab29be04-bba2-4f52-ab65-b63a19616c2b" />
+
+
+Jak widzimy na zrzucie ekranu aktualizacja odbyła się sukcesem, tylko że przez jakiś czas prametry docelowe objektu <code>hpa</code> są tymczasowo nidostępne:
+<img width="1921" height="657" alt="image" src="https://github.com/user-attachments/assets/9512e561-715b-4037-b355-388f60f61961" />
+
+
+Ale za chwileczkę stan <code>hpa</code> wróci się do normalnego:
+<img width="1920" height="836" alt="image" src="https://github.com/user-attachments/assets/90471e41-e9c3-4830-825f-7afa9b34c2b6" />
