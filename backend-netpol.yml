@@ -1,0 +1,29 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: backend-netpol
+  namespace: backend                      # W ramach namespace "backend" 
+spec:
+  podSelector:                            # Do wszystkich podów z etykietą "backend"
+    matchLabels:
+      app: backend
+  policyTypes:                            # Konfigurujemy politykę wychodzącą: "Egress" 
+  - Egress
+  egress:
+  - to:                                   # Polityka dotycząca komunikacji podów backend-u z bazą danych    
+    - podSelector:                        # Muszą oni znajdować się w namespace "backend" o etykiecie "ns"
+        matchLabels:                      # I <- (Czyli AND, &&) ten pod musi mieć etykiete "app=db"
+          app: db
+      namespaceSelector:
+        matchLabels:
+          ns: backend
+    ports:                                # I oczywiście port
+    - protocol: TCP
+      port: 3306
+  - to:                                   # Dokładnie to samo tylko dla obiektów namespas-u "frontend"
+    - podSelector:
+        matchLabels:
+          app: frontend
+      namespaceSelector:
+        matchLabels:
+          ns: frontend

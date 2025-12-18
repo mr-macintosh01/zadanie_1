@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: frontend
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 1
+              preference:
+                matchExpressions:
+                  - key: node
+                    operator: In
+                    values:
+                      - A                 # Umieszczamy Deployment "frontend" na węzle A 
+      containers:
+      - name: frontend 
+        image: nginx
+        resources:                        # Obowiązkowo, bo mamy Resource Quota
+          limits:
+            memory: "150Mi"
+            cpu: "100m"
+          requests:
+            memory: "150Mi"
+            cpu: "100m"
+

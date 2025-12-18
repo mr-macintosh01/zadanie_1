@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+  namespace: backend
+  labels:
+    app: db
+spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 1
+          preference:
+            matchExpressions:
+              - key: node
+                operator: In
+                values:
+                  - C                     # Umieszczamy pod na węzle B wraz z Deploymentem backend
+  containers:
+  - name: mysql
+    image: mysql
+    resources:                         # Dodajemy zasoby, bo używamy Quota
+      limits:
+        memory: "512Mi"
+        cpu: "600m"
+      requests:                        # Są to minimalne zasoby dla mysql kontenera
+        memory: "512Mi"
+        cpu: "100m"
+    
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: password
