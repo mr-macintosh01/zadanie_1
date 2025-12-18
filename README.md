@@ -95,3 +95,16 @@ Jak widzimy na zrzucie ekranu aktualizacja odbyła się sukcesem, tylko że prze
 
 Ale za chwileczkę stan <code>hpa</code> wróci do normalnego:
 <img width="1920" height="836" alt="image" src="https://github.com/user-attachments/assets/90471e41-e9c3-4830-825f-7afa9b34c2b6" />
+
+2) <b>Jeśli odpowiedź na poprzednie pytanie jest pozytywna to proszę podać przykładowe
+parametry strategii rollingUpdate, które zagwarantują, że:
+
+a) Podczas aktualizacji zawsze będa aktywne 2 pod-y realizujące działanie aplikacji
+frontend oraz
+b) Nie zostaną przekroczone parametry wcześniej zdefiniowanych ograniczeń
+zdefiniowanych dla przestrzeni nazw frontend. (ilość Pod-ów, CPU lub RAM). </b>
+
+Żeby osiągnąć takiego zachowania musimy dodać pole <code>strategy</code> wraz z parametrami aktualizacji <code>maxSurge: 0</code> i <code>maxUnavailable: 1</code>. Czemu tak? <code>maxSurge: 0</code> zapewni że nawet w sytuacji maksymalnej liczby dostępnych podów (=10) liczba przekraczająca podów zawsze będzie równa zero i nie przykroczymy limitu. <code>maxUnavailable: 1</code> zapewni że nawet przy minimalnej liczbie podów (=3) niedostępnych zawsze będzie 1, co znaczy że zawsze będą dostępne minimalnie 2 pody.
+
+<img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/9fd996d9-9dbf-4ff1-be07-8fa0f23a846a" />
+
