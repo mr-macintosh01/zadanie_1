@@ -80,7 +80,8 @@ kontenera) gdy aplikacja jest pod kontrolą opracowanego autoskalera HPA ? Prosz
 odpowiedzi (TAK lub NIE) dodać link do fragmentu dokumentacji, w którym jest
 rozstrzygnięta ta kweska.</b>
 
-<b>Odpowiedź:</b> Tak, to jest możliwe. 
+<b>Odpowiedź:</b> Tak, to jest możliwe.
+
 <b>Link do dokumentacji:</b> <a>https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#autoscaling-during-rolling-update</a>
 
 Można to udowodnić w bardzo prosty sbosób. Zmienimy wersje obrazu <code>nginx</code> na <code>nginx:1.17</code> i zobaczmy co się będzie dziłać.
