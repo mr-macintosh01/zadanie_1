@@ -24,7 +24,8 @@
 
 <b>Wszystkie pody są na swoich miejscah:</b>
 
-<img width="1575" height="259" alt="image" src="https://github.com/user-attachments/assets/7d2c66ea-c627-4dbe-bb65-3e190795fa57" />
+<img width="1920" height="221" alt="image" src="https://github.com/user-attachments/assets/a9eb64dc-e7cd-4b99-a6ae-58985bfaa733" />
+
 
 
 
