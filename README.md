@@ -88,11 +88,9 @@ Można to udowodnić w bardzo prosty sbosób. Zmienimy wersje obrazu <code>nginx
 Z powodu tego że już to robiłem to mogę się powrocić do pewnej wersji rewizji, tak i zrobiłem:
 
 <img width="1920" height="145" alt="image" src="https://github.com/user-attachments/assets/ab29be04-bba2-4f52-ab65-b63a19616c2b" />
-
-
-Jak widzimy na zrzucie ekranu aktualizacja odbyła się sukcesem, tylko że przez jakiś czas prametry docelowe objektu <code>hpa</code> są tymczasowo nidostępne:
 <img width="1921" height="657" alt="image" src="https://github.com/user-attachments/assets/9512e561-715b-4037-b355-388f60f61961" />
 
+Jak widzimy na zrzucie ekranu aktualizacja odbyła się sukcesem, tylko że przez jakiś czas prametry docelowe objektu <code>hpa</code> były tymczasowo niedostępne.
 
-Ale za chwileczkę stan <code>hpa</code> wróci się do normalnego:
+Ale za chwileczkę stan <code>hpa</code> wróci do normalnego:
 <img width="1920" height="836" alt="image" src="https://github.com/user-attachments/assets/90471e41-e9c3-4830-825f-7afa9b34c2b6" />
