@@ -97,9 +97,7 @@ Ale za chwileczkę stan <code>hpa</code> wróci do normalnego:
 <img width="1920" height="836" alt="image" src="https://github.com/user-attachments/assets/90471e41-e9c3-4830-825f-7afa9b34c2b6" />
 
 2) <b>Jeśli odpowiedź na poprzednie pytanie jest pozytywna to proszę podać przykładowe
-parametry strategii rollingUpdate, które zagwarantują, że:
-
-a) Podczas aktualizacji zawsze będa aktywne 2 pod-y realizujące działanie aplikacji
+parametry strategii rollingUpdate, które zagwarantują, że: a) Podczas aktualizacji zawsze będa aktywne 2 pod-y realizujące działanie aplikacji
 frontend oraz
 b) Nie zostaną przekroczone parametry wcześniej zdefiniowanych ograniczeń
 zdefiniowanych dla przestrzeni nazw frontend. (ilość Pod-ów, CPU lub RAM). </b>
