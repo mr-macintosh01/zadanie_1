@@ -102,7 +102,7 @@ frontend oraz
 b) Nie zostaną przekroczone parametry wcześniej zdefiniowanych ograniczeń
 zdefiniowanych dla przestrzeni nazw frontend. (ilość Pod-ów, CPU lub RAM). </b>
 
-Żeby osiągnąć takiego zachowania musimy dodać pole <code>strategy</code> wraz z parametrami aktualizacji <code>maxSurge: 0</code> i <code>maxUnavailable: 1</code>. Czemu tak? <code>maxSurge: 0</code> zapewni że nawet w sytuacji maksymalnej liczby dostępnych podów (=10) liczba przekraczająca podów zawsze będzie równa zero i nie przykroczymy limitu. <code>maxUnavailable: 1</code> zapewni że nawet przy minimalnej liczbie podów (=3) niedostępnych zawsze będzie 1, co znaczy że zawsze będą dostępne minimalnie 2 pody.
+Żeby osiągnąć takiego zachowania musimy dodać pole <code>strategy</code> wraz z parametrami aktualizacji <code>maxSurge: 0</code> i <code>maxUnavailable: 1</code>. Czemu tak? <code>maxSurge: 0</code> zapewni, że nawet w sytuacji maksymalnej liczby dostępnych podów (=10), liczba przekraczająca podów zawsze będzie równa zero i nie przekroczy limitu. <code>maxUnavailable: 1</code> zapewni, że nawet przy minimalnej liczbie podów (=3) niedostępnych zawsze będzie 1, co znaczy, że zawsze będą dostępne minimalnie 2 pody.
 
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/9fd996d9-9dbf-4ff1-be07-8fa0f23a846a" />
 
